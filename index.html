@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!----  box icons -->
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="cover cover-left"></div>
+        <div class="cover cover-right turn"></div>
+
+        <div class="book">
+            <!--profile page-->
+            <div class="book-page page-left">
+                <div class="profile-page">
+                    <div class="profile-card">
+                        <img src="./img/kinjal.jpg" alt="Profile Picture">
+                        <div class="profile-card-info">
+                            <div class="profile-card-header">
+                                <div>
+                                    <h1>Kinjal Chamadiya</h1>
+                                    <h3>Web Developer</h3>
+                                </div>
+                                <div class="social-media">
+                                    <a href="https://www.linkedin.com/in/your-linkedin-id" target="_blank"
+                                        rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
+                                    <a href="https://github.com/Kinju26"><i class='bx bxl-github'></i></a>
+                                    
+                                </div>
+                            </div>
+
+                            <p>Hello! I'm Kinjal, a passionate web developer with experience in creating responsive and
+                                user-friendly websites.</p>
+
+                            <div class="btn-box">
+                                <button id="downloadCv" type="button" class="btn">Download CV</button>
+                                <button id="contactBtn" type="button" class="btn contact-me">Contact Me</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-details">
+                        <h2>About Me</h2>
+                        <p>I build modern, responsive websites using HTML, CSS, and JavaScript. I enjoy turning ideas
+                            into clean designs that work well on all devices.</p>
+
+                        <div class="info-row">
+                            <div>
+                                <h3>Experience</h3>
+                                <p>Fresher</p>
+                            </div>
+                            <div>
+                                <h3>Skills</h3>
+                                <p>UI design, responsive layouts, web animations</p>
+                            </div>
+                        </div>
+
+                        <div class="info-row">
+                            <div>
+                                <h3>Location</h3>
+                                <p>Ahmedabad, India</p>
+                            </div>
+                            <div>
+                                <h3>Availability</h3>
+                                <p>Open for new projects</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-panel hidden" id="contactPanel">
+                <h2>Contact Information</h2>
+                <p>Ready to talk? Here's how to reach me directly.</p>
+                <div class="contact-grid">
+                    <div>
+                        <span>Email</span>
+                        <a href="mailto:chamadiyakinjal@gmail.com">chamadiyakinjal@gmail.com</a>
+                    </div>
+                    <div>
+                        <span>Phone</span>
+                        <p>+91 8980516290</p>
+                    </div>
+                    <div>
+                        <span>Location</span>
+                        <p>Ahmedabad, India</p>
+                    </div>
+                    <div>
+                        <span>LinkedIn</span>
+                        <a href="https://www.linkedin.com/in/kinjal-chamadiya-8a2a33308/?skipRedirect=true"
+                            target="_blank"
+                            rel="noopener noreferrer">https://www.linkedin.com/in/kinjal-chamadiya-8a2a33308/?skipRedirect=true</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-section" id="portfolioSection">
+                <h2>Recent Projects</h2>
+                <div class="portfolio-list" id="portfolioList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

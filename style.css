@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+:root {
+    --bg-color: #081b29;
+    --main-color: #00abf0;
+    --text-color: #333;
+    --second-text-color: #555;
+    --white-color: #fff;
+    --cover-color: linear-gradient(45deg, #00abf0, #006e9a);
+    --pages-color: linear-gradient(90deg, #fff, #ddd);
+    --border: .125rem solid #00abf0;
+    --box-shadow: 0 0 .6rem rgba(0, 0, 0, .2);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top, #0a2b4f 0%, #04101c 65%);
+    color: var(--text-color);
+    padding: 2rem;
+}
+
+.wrapper {
+    position: relative;
+    width: min(95vw, 72rem);
+    min-height: 42rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 0.35rem solid rgba(15, 32, 58, 0.95);
+    box-shadow: 0 0 4rem rgba(0, 0, 0, 0.45);
+    background: rgba(5, 15, 31, 0.82);
+}
+
+.cover {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    box-shadow: var(--box-shadow);
+    transform-origin: right;
+}
+
+.cover.cover-left {
+    z-index: -1;
+}
+
+.cover-left {
+    left: 0;
+    background: linear-gradient(180deg, #1f8cdf 0%, #0a4a94 100%);
+}
+
+.cover-right {
+    right: 0;
+    background: linear-gradient(180deg, #1f8cdf 0%, #0a4a94 100%);
+}
+
+.wrapper::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.04), transparent 26%);
+    pointer-events: none;
+}
+
+.cover.cover-right.turn {
+    transform: rotateY(180deg);
+}
+
+.book {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.book .book-page {
+    position: relative;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.profile-page {
+    width: 100%;
+    max-width: 68rem;
+    min-height: auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 2rem;
+    padding: 2rem;
+    background: rgba(10, 23, 45, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 1.25rem;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04), 0 0 2rem rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(12px);
+}
+
+.profile-card {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.profile-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.profile-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.profile-card h1 {
+    margin-bottom: 0.25rem;
+}
+
+.profile-card,
+.profile-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.contact-panel,
+.portfolio-section {
+    width: 100%;
+    max-width: 68rem;
+}
+
+.profile-card img {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 1.75rem;
+    border: 0.35rem solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.22);
+    align-self: start;
+}
+
+.profile-card h1 {
+    font-size: 2.25rem;
+    color: #ffffff;
+    letter-spacing: 0.02em;
+}
+
+.profile-card h3 {
+    color: #9ad1ff;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+}
+
+.profile-card p,
+.profile-details p {
+    color: rgba(233, 244, 255, 0.95);
+    line-height: 1.8;
+}
+
+.social-media {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-media a {
+    color: #ffffff;
+    font-size: 1.3rem;
+}
+
+.btn-box {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.9rem 1.5rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.14);
+    color: #ffffff;
+    transition: background 0.25s ease;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.24);
+}
+
+.profile-details h2 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.profile-details h3 {
+    color: #dbeeff;
+    margin-bottom: 0.25rem;
+}
+
+.info-row {
+    display: grid;
+    gap: 1rem;
+}
+
+.info-row div {
+    padding: 1rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.info-row div p {
+    color: #cfe7ff;
+    margin-top: 0.4rem;
+}
+
+@media (max-width: 1024px) {
+    .profile-page {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 1.5rem;
+    }
+
+    .btn-box {
+        justify-content: stretch;
+    }
+
+    .btn {
+        flex: 1;
+    }
+}
+
+@media (max-width: 860px) {
+
+    .contact-grid,
+    .portfolio-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 620px) {
+    body {
+        padding: 1rem;
+    }
+
+    .wrapper {
+        width: 100%;
+        min-height: auto;
+        border-width: 0.25rem;
+    }
+
+    .book .book-page {
+        padding: 1.25rem;
+    }
+
+    .profile-page {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .profile-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-panel,
+    .portfolio-section {
+        padding: 1.25rem;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+.contact-panel,
+.portfolio-section {
+    width: 100%;
+    margin-top: 1.75rem;
+    padding: 1.75rem;
+    border-radius: 1.25rem;
+    background: rgba(10, 20, 40, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 1.75rem rgba(0, 0, 0, 0.18);
+}
+
+.contact-panel h2,
+.portfolio-section h2 {
+    color: #9ad1ff;
+    margin-bottom: 1rem;
+}
+
+.contact-panel p,
+.portfolio-section p {
+    color: rgba(235, 247, 255, 0.9);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.contact-grid div {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 1rem;
+}
+
+.portfolio-section {
+    width: 100%;
+    max-width: 68rem;
+}
+
+.portfolio-list {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.portfolio-card {
+    padding: 1.4rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact-grid span {
+    display: block;
+    color: #8cc6ff;
+    margin-bottom: 0.35rem;
+    font-size: 0.95rem;
+}
+
+.contact-grid a,
+.contact-grid p {
+    color: #e5f4ff;
+    font-size: 0.95rem;
+}
+
+.portfolio-list {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.portfolio-card {
+    padding: 1.4rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.portfolio-card h3 {
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+}
+
+.portfolio-card p {
+    color: rgba(225, 236, 255, 0.9);
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.portfolio-card a {
+    color: #80c5ff;
+    font-weight: 500;
+}
+
+@media (max-width: 860px) {
+
+    .contact-grid,
+    .portfolio-list {
+        grid-template-columns: 1fr;
+    }
+}
